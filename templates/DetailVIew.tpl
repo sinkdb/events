@@ -1,1 +1,9 @@
-<h2>Event Details</h2>
+<!-- BEGIN DETAILS -->
+<h2>{eventname}</h2>
+{eventlocation}
+{eventdate}
+{opentime}
+{starttime}
+<hr>
+{ticketprices}
+<!-- END DETAILS -->
