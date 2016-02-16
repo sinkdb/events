@@ -51,8 +51,8 @@
 				{eventrestrictions}
 			</div>
 			<div class="button">
-				<button type="button" class="btn btn-primary">Details</button>
-				<button type="button" class="btn btn-danger">Edit</button>
+				<button type="submit" class="btn btn-primary">Details</button>
+				<button type="submit" class="btn btn-danger">Edit</button>
 			</div>
 		</div>
 <!-- END EVENTS -->
