@@ -17,8 +17,13 @@ class ShowEventDetailsCommand extends \events\Command {
 	function execute(CommandContext $context)
 	{
 		$details = new \events\DetailView();
+		//$context['eventID'] = 1;
+		$context->addParam('eventID', '1');
+		$context->addParam('eventID', '2');
+		$details->setEventID($context->get('eventID'));
+		var_dump($context);
 
 		//$context->setContent($home->show($eventID));
-		$context->setContent($home->show(1));
+		$context->setContent($details->show());
 	}
 }
