@@ -1,6 +1,6 @@
 <!-- BEGIN DETAILS -->
 <h2>{eventname}</h2>
-{eventlocation}
+Event location: {eventlocation}
 {eventdate}
 {opentime}
 {starttime}

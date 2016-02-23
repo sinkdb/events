@@ -31,7 +31,7 @@ class EventsFactory
 			EventsFactory::$eventHandler = new GuestEvents();
 		}
 
-		EventsFactory::$eventHandler = new EventDetails();
+		//EventsFactory::$eventHandler = new EventDetails();
 
 		return EventsFactory::$eventHandler;
 	}

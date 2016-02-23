@@ -9,8 +9,8 @@ class ShowGuestHomeCommand extends \events\Command {
 
 	function execute(CommandContext $context)
 	{
-		//$home = new \events\GuestView();
-		$home = new \events\DetailView();
+		$home = new \events\GuestView();
+		//$home = new \events\DetailView();
 
 		$context->setContent($home->show());
 

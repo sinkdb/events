@@ -29,6 +29,7 @@ class DetailView extends \events\EventsView {
 		//$id = $this->eventID;
 		$db = \Database::getDB();
 		$query = "select * from events_events where id = '$this->eventID'";
+		//$query = "select * from events_events where id = 1";
 		$pdo = $db->query($query);
 		$result = $pdo->fetchAll();
 		foreach ($result as $key => $value) 
