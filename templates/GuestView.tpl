@@ -37,7 +37,6 @@
 </head>
 <body>
 <h2>Upcoming Events</h2>
-<?php echo "gfdgfgfdgfsd"; ?>
 <!-- BEGIN EVENTS -->
 		<div class="events">
 			<div class="image">
@@ -58,7 +57,6 @@
 			</div>
 		</div>
 <!-- END EVENTS -->
-<?php echo $_POST["test"]; ?>
 
 </body>
 </html>

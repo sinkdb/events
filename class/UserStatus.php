@@ -12,8 +12,8 @@ class UserStatus
 		/*return Current_User::isLogged() &&
 		Current_User::IsUnrestricted('events');*/
 
-		//return true;
-		return false;
+		return true;
+		//return false;
 	}
 
 	public static function isGuest()

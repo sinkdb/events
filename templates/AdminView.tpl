@@ -31,12 +31,17 @@
 		div.button
 		{
 			float:right;
+			display:inline;
+			vertical-align: middle;
 			margin-right:20px;
 		}
 	</style>
 </head>
 <body>
 <h2>Upcoming Events</h2>
+<form method="post" action="./events/?action=AddEvent">
+<button name="test" type="submit" class="btn btn-primary" value="{id}">Add Event</button>
+</form>
 <!-- BEGIN EVENTS -->
 		<div class="events">
 			<div class="image">
@@ -51,8 +56,13 @@
 				{eventrestrictions}
 			</div>
 			<div class="button">
-				<button type="submit" class="btn btn-primary">Details</button>
-				<button type="submit" class="btn btn-danger">Edit</button>
+				<form method="post" action="./events/?action=ShowEventDetails">
+				<button name="test" type="submit" class="btn btn-primary" value="{id}">Details</button>
+				</form>
+				<form method="post" action="./events/?action=EditEventDetails">
+				<button name="test" type="submit" class="btn btn-danger" value="{id}">Edit</button>
+				</form>
+				<!--<button type="submit" class="btn btn-danger">Edit</button>-->
 			</div>
 		</div>
 <!-- END EVENTS -->
