@@ -52,7 +52,7 @@
 			</div>
 			<div class="button">
 				<form method="post" action="./events/?action=ShowEventDetails">
-				<button name="test" type="submit" class="btn btn-primary" value="{id}">Details</button>
+					<button name="test" type="submit" class="btn btn-primary" value="{id}">Details</button>
 				</form>
 			</div>
 		</div>
