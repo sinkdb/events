@@ -35,6 +35,10 @@
 			vertical-align: middle;
 			margin-right:20px;
 		}
+		form
+		{
+			display:inline;
+		}
 	</style>
 </head>
 <body>
