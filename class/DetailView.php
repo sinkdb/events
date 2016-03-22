@@ -4,10 +4,6 @@ namespace events;
 class DetailView extends \events\EventsView {
 
 	public $eventID;
-/*
-	public function __construct()
-	{}
-*/
 
 	public function setEventID($id)
 	{

@@ -14,7 +14,6 @@ abstract class EventsView extends View {
 
 	public function setMain($content)
 	{
-		//$this->content = $content;
 		$this->main = $content;
 	}
 

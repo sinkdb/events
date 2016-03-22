@@ -10,7 +10,6 @@ class AdminEvents extends Events
 		$view = new AdminView();
 		$view->setMain($this->context->getContent());
 
-		//$view->show();
 	}
 }
 ?>

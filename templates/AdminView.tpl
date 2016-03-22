@@ -43,7 +43,7 @@
 </head>
 <body>
 <h2>Upcoming Events</h2>
-<form method="post" action="./events/?action=AddEvent">
+<form method="post" action="./events/?action=ShowAddEvent">
 <button name="test" type="submit" class="btn btn-primary" value="{id}">Add Event</button>
 </form>
 <!-- BEGIN EVENTS -->
@@ -66,7 +66,6 @@
 				<form method="post" action="./events/?action=EditEventDetails">
 				<button name="test" type="submit" class="btn btn-danger" value="{id}">Edit</button>
 				</form>
-				<!--<button type="submit" class="btn btn-danger">Edit</button>-->
 			</div>
 		</div>
 <!-- END EVENTS -->

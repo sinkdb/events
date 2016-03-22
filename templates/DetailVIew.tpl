@@ -25,6 +25,11 @@
 			float:left;
 			width:50%;
 			height:260px;
+
+		}
+		div.description
+		{
+			word-wrap: break-word;
 		}
 	</style>
 </head>

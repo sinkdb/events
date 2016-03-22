@@ -10,12 +10,5 @@ class GuestEvents extends Events
 		$view = new GuestView();
 		$view->setMain($this->context->getContent());
 		
-		//parent::construct($main);
-		//var_dump($result);
-		//exit;
-		//$view->setMain($result);
-
-
-		//$view->show();
 	}
 }

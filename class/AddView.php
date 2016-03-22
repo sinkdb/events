@@ -1,7 +1,7 @@
 <?php
 namespace events;
 
-class AddView extends \events\EventsVIew {
+class AddView extends \events\EventsView {
 	
 	public function show()
 	{
