@@ -55,7 +55,7 @@
 				<ul>
 					<li>Show Start: {starttime} </li>
 						Doors Open: {opentime}
-					<li>Ticket Price: ${ticketprices} </li>
+					<li>Ticket Price: {ticketprices} </li>
 				</ul>
 				{eventrestrictions}
 			</div>

@@ -49,7 +49,8 @@
 		Doors: {opentime}
 		Show: {starttime}
 		<br />
-		<span class="glyphicon glyphicon-usd"></span> {ticketprices}
+		<i class="fa fa-ticket"></i> {ticketprices}
+		
 	</div>
 	<div class="image">
 	</div>

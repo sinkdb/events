@@ -23,36 +23,20 @@ class AddEventCommand extends \events\Command {
 		//if($event_name) check for null in the fields that cant be
 		//convert give date in to timestamp
 		//also add datepicker of some sort, or at least put a template in
-
-		//echo $_POST['event_name'];
 		
 		$db = \Database::getDB();
-	/*
-		$query = "INSERT INTO events_events (id, eventname, eventlocation, imageid, eventdate, ticketprices, ticketlocation, opentime, starttime, eventrestrictions, artistdetails)
-					VALUES (4, :event_name:, :event_location:, :imageid:, :event_name:, :ticket_prices:, :ticket_location:, :open_time:, :start_time:, :event_restrictions:, :artist_details:)";
-					*/
-
+		$pdo = $db->getPDO();
+	
 		$query = "INSERT INTO events_events (id, eventname, eventlocation, eventdate, ticketprices, ticketlocation, opentime, starttime, eventrestrictions, artistdetails)
-				VALUES (5, '$event_name', '$event_location', '$event_date', '$ticket_prices', '$ticket_location', '$open_time', '$start_time', '$event_restrictions', '$artist_details')";
+					VALUES (nextval('events_seq'), :event_name, :event_location, :event_date, :ticket_prices, :ticket_location, :open_time, :start_time, :event_restrictions, :artist_details)";
 
-		/*
-		id
-		eventname
-		eventlocation
-		imageid
-		eventdate
-		ticketprices
-		ticketlocation
-		opentime
-		starttime
-		eventrestrictions
-		artistdetails
-		videolink
-		*/
+		$sth = $pdo->prepare($query);
 
+		$sth->execute(array('event_name'=>$event_name, 'event_location'=>$event_location, 'event_date'=>$event_date, 'ticket_prices'=>$ticket_prices, 'ticket_location'=>$ticket_location, 'open_time'=>$open_time, 'start_time'=>$start_time, 'event_restrictions'=>$event_restrictions, 'artist_details'=>$artist_details));
 
+		$cmd = \events\CommandFactory::getCommand('ShowAdminHome');
+		$cmd->execute($context);
 
-		$pdo = $db->query($query);
 
 	}
 }
