@@ -1,7 +1,7 @@
 <?php
 namespace events;
 
-class DetailView extends \events\EventsView {
+class EditView extends \events\EventsView {
 
 	public $eventID;
 
@@ -9,12 +9,12 @@ class DetailView extends \events\EventsView {
 	{
 		$this->eventID = $id;
 	}
-
+	
 	public function show()
 	{
 		$tpl = array();
 
-		\Layout::addPageTitle("Event Details");
+		\Layout::addPageTitle("Edit Event");
 
 		$db = \Database::getDB();
 		$query = "select * from events_events where id = '$this->eventID'";
@@ -33,6 +33,6 @@ class DetailView extends \events\EventsView {
 			$tpl['DETAILS'][$i]['eventdate'] = $final_date;
 		}
 
-		$this->showEvents(\PHPWS_Template::process($tpl, 'events', 'DetailView.tpl'));
+		$this->showEvents(\PHPWS_Template::process($tpl, 'events', 'EditView.tpl'));
 	}
 }

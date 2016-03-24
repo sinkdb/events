@@ -8,13 +8,10 @@ class ShowAdminHomeCommand extends \events\Command {
 	}
 
 	function execute(CommandContext $context)
-	{
-		//PHPWS_Core::initModClass('events','HomeView.php');
-		
+	{		
 		$home = new \events\AdminView();
 
 		$context->setContent($home->show());
-		//var_dump($context);
 	}
 }
 

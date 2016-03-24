@@ -61,10 +61,10 @@
 			</div>
 			<div class="button">
 				<form method="post" action="./events/?action=ShowEventDetails">
-				<button name="test" type="submit" class="btn btn-primary" value="{id}">Details</button>
+				<button name="details" type="submit" class="btn btn-primary" value="{id}">Details</button>
 				</form>
-				<form method="post" action="./events/?action=EditEventDetails">
-				<button name="test" type="submit" class="btn btn-danger" value="{id}">Edit</button>
+				<form method="post" action="./events/?action=ShowEditEvent">
+				<button name="edit" type="submit" class="btn btn-danger" value="{id}">Edit</button>
 				</form>
 			</div>
 		</div>

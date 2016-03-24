@@ -6,16 +6,11 @@ class AdminView extends \events\EventsView {
 	public function show()
 	{
 		$tpl = array();
-		//$tpl['TEST'] = "HomeView.tpl";
 		/*var_dump($tpl);
 		var_dump(debug_backtrace());*/
 
 		\Layout::addPageTitle("Upcoming Events");
 
-		//this displays nothing
-		//return \PHPWS_Template::process($tpl, 'events', 'HomeView.tpl');
-
-		//$current_time = 0;
 		$current_time = time();
 		$db = \Database::getDB();
 		$query = "select * from events_events where eventdate > '$current_time' order by eventdate";

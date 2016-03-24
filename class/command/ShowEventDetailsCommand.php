@@ -17,7 +17,7 @@ class ShowEventDetailsCommand extends \events\Command {
 	function execute(CommandContext $context)
 	{
 		$details = new \events\DetailView();
-		$details->setEventID($context->get('test'));
+		$details->setEventID($context->get('details'));
 
 		$context->setContent($details->show());
 	}
