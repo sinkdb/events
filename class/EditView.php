@@ -28,10 +28,9 @@ class EditView extends \events\EventsView {
 		{
 			$epoch = $tpl['DETAILS'][$i]['eventdate'];
 			$formatted_date = new \DateTime("@$epoch");
-			$formatted_date = $formatted_date->format('M/d/Y');
-			$final_date = "" . $formatted_date[0] . $formatted_date[1] . $formatted_date[2] . " " . $formatted_date[4] . $formatted_date[5];
-			$tpl['DETAILS'][$i]['eventdate'] = $final_date;
-		}
+			$formatted_date = $formatted_date->format('Y-m-d');
+			$tpl['DETAILS'][$i]['eventdate'] = $formatted_date;
+		}	
 
 		$this->showEvents(\PHPWS_Template::process($tpl, 'events', 'EditView.tpl'));
 	}

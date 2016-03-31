@@ -30,8 +30,9 @@ class AddEventCommand extends \events\Command {
 
 		$sth->execute(array('event_name'=>$event_name, 'event_location'=>$event_location, 'event_date'=>$event_date, 'ticket_prices'=>$ticket_prices, 'ticket_location'=>$ticket_location, 'open_time'=>$open_time, 'start_time'=>$start_time, 'event_restrictions'=>$event_restrictions, 'artist_details'=>$artist_details));
 
-		$cmd = \events\CommandFactory::getCommand('ShowAdminHome');
-		$cmd->execute($context);
+		//$cmd = \events\CommandFactory::getCommand('ShowAdminHome');
+		//$cmd->execute($context);
+		header('Location: ./?action=ShowAdminHome');
 
 	}
 }

@@ -23,7 +23,7 @@
 <hr>
 <!-- BEGIN DETAILS -->
 <div class="left">
-	<form method="post" action="./events/?action=AddEvent">
+	<form method="post" action="./events/?action=EditEventDetails">
 	<label for="event_name">Event Name:</label>
 	<input name="event_name" type="text" class="form-control" id="event_name" value="{eventname}"required>
 
@@ -53,13 +53,13 @@
 	<input name="event_image" id="event_image" type="file" class="file">
 
 	<label for="event_date">Event Date:</label>
-	<input name="event_date" type="date" class="form-control" id="event_date" value="2000-5-5">
-
+	<input name="event_date" type="date" class="form-control" id="event_date" value="{eventdate}">
+	
 	<label for="event_details">Event/Artist Details:</label>
 	<textarea name="event_details" class="form-control" rows="6" id="event_details">{artistdetails}</textarea>
 	<hr>
 	
-	<button name="add" type="submit" class="btn btn-primary" value="">Submit</button>
+	<button name="edit" type="submit" class="btn btn-primary" value="{id}">Submit</button>
 	</form>
 	<form method="" action="./events/?action=ShowAdminHome">
 	<button name="cancel" type="submit" class="btn btn-danger" value="">Cancel</button>
