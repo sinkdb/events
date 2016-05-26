@@ -13,7 +13,7 @@
 		} 
 		div.image
 		{
-			background-color:black;
+			/*background-color:black;*/
 			float:left;
 			width:50%;
 			height:120px;
@@ -49,6 +49,7 @@
 <!-- BEGIN EVENTS -->
 		<div class="events">
 			<div class="image">
+				<img class="img-responsive" src="{imageurl}" height="120px" alt="{imageurl}">
 			</div>
 			<div class="info">
 				<h3>{eventname}</h3>

@@ -17,14 +17,20 @@
 			display:inline;
 		}
 	</style>
+<!-- 1 -->
+<link href="css/dropzone.css" type="text/css" rel="stylesheet" />
+ 
+<!-- 2 -->
+<script src="dropzone.min.js"></script>
+
 </head>
 <body>
 <h2>Add Event</h2>
 <hr>
 <div class="left">
-	<form method="post" action="./events/?action=AddEvent">
+	<form method="post" action="./events/?action=AddEvent" enctype = "multipart/form-data" >
 	<label for="event_name">Event Name:</label>
-	<input name="event_name" type="text" class="form-control" id="event_name" required>
+	<input name="event_name" type="text" class="form-control" id="event_name">
 
 	<label for="event_location">Event Location:</label>
 	<input name="event_location" type="text" class="form-control" id="event_location" required>
@@ -49,7 +55,7 @@
 
 <div class="right">
 	<label for="event_image">Event/Artist Image:</label>
-	<input name="event_image" id="event_image" type="file" class="file">
+	<input name="event_image" id="event_image" type="file" class="form-control">
 
 	<label for="event_date">Event Date:</label>
 	<input name="event_date" type="date" class="form-control" id="event_date">

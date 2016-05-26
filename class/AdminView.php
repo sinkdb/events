@@ -6,8 +6,6 @@ class AdminView extends \events\EventsView {
 	public function show()
 	{
 		$tpl = array();
-		/*var_dump($tpl);
-		var_dump(debug_backtrace());*/
 
 		\Layout::addPageTitle("Upcoming Events");
 
