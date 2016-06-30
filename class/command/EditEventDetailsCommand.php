@@ -9,6 +9,15 @@ class EditEventDetailsCommand extends \events\Command {
 
 	function execute(CommandContext $context)
 	{
+		if($_FILES['event_image']['size'] > 0 and $_FILES['event_image']['size'] < 2097152)
+		{
+			$tempFile = $_FILES['event_image']['tmp_name'];   
+			$targetPath = PHPWS_SOURCE_DIR . "mod/events/images/";
+			$targetFile =  $targetPath. $_FILES['event_image']['name'];
+			$image_url = "mod/events/images/" . $_FILES['event_image']['name'];
+			move_uploaded_file($tempFile,$targetFile);
+		}
+
 		$id = $context->get('edit');
 		$event_name = $context->get('event_name');
 		$event_location = $context->get('event_location');

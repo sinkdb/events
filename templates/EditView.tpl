@@ -52,6 +52,9 @@
 	<label for="event_image">Event/Artist Image:</label>
 	<input name="event_image" id="event_image" type="file" class="file">
 
+	<label for "current_image">Current Image:</label>
+	<img class="img-responsive" src="{imageurl}" height="100" width="250" alt="{imageurl}">
+
 	<label for="event_date">Event Date:</label>
 	<input name="event_date" type="date" class="form-control" id="event_date" value="{eventdate}">
 	

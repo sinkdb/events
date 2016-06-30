@@ -8,7 +8,7 @@
 		    border-color:black;
 		    border-width:1px;
 		    margin:20px;
-		    width:100%;
+		    width:800px;
 			height:165px;
 		} 
 		div.image
@@ -49,7 +49,7 @@
 <!-- BEGIN EVENTS -->
 		<div class="events">
 			<div class="image">
-				<img class="img-responsive" src="{imageurl}" height="120px" alt="{imageurl}">
+				<img class="img-responsive" src="{imageurl}" height="100" width="250" alt="{imageurl}">
 			</div>
 			<div class="info">
 				<h3>{eventname}</h3>
