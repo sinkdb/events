@@ -23,7 +23,7 @@
 <hr>
 <!-- BEGIN DETAILS -->
 <div class="left">
-	<form method="post" action="./events/?action=EditEventDetails">
+	<form method="post" action="./events/?action=EditEventDetails"  enctype = "multipart/form-data">
 	<label for="event_name">Event Name:</label>
 	<input name="event_name" type="text" class="form-control" id="event_name" value="{eventname}"required>
 
@@ -50,7 +50,9 @@
 
 <div class="right">
 	<label for="event_image">Event/Artist Image:</label>
-	<input name="event_image" id="event_image" type="file" class="file">
+	<input name="event_image" id="event_image" type="file" class="file" value="{imageurl}">
+
+	<input hidden name="test_name" id="test_name" value="{imageurl}">
 
 	<label for "current_image">Current Image:</label>
 	<img class="img-responsive" src="{imageurl}" height="100" width="250" alt="{imageurl}">

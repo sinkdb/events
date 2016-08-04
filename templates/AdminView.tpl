@@ -3,30 +3,41 @@
 	<style>
 		div.events 
 		{
+			overflow: hidden;
 		    background-color:white;
 		    border-style:solid;
 		    border-color:black;
 		    border-width:1px;
 		    margin:20px;
 		    width:800px;
-			height:165px;
+			min-height:165px;
+			/*height: auto;*/
+			/*height: 1%;*/
+			
+			/*display: table;*/
 		} 
+		div.events:after
+		{
+			/*display: table;
+			clear : both;*/
+		}
 		div.image
 		{
 			/*background-color:black;*/
 			float:left;
 			width:50%;
-			height:120px;
+			/*max-height:120px;*/
 			margin-top: 20px;
     		margin-bottom: 20px;
     		margin-right: 40px;
     		margin-left: 20px;
+    		overflow: hidden;
 		}
 		div.info
 		{
 			float:right;
 			width:40%;
-			height:120px;
+			/*height:120px;*/
 		}
 		div.button
 		{
@@ -47,7 +58,7 @@
 <button name="test" type="submit" class="btn btn-primary" value="{id}">Add Event</button>
 </form>
 <!-- BEGIN EVENTS -->
-		<div class="events">
+		<div class="events" style="height: auto;">
 			<div class="image">
 				<img class="img-responsive" src="{imageurl}" height="100" width="250" alt="{imageurl}">
 			</div>

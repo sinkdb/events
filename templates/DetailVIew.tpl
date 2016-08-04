@@ -17,7 +17,7 @@
 			float:right;
 			/*width:380px;*/
 			width:50%;
-			background-color:black;
+			/*background-color:black;*/
 			height:260px;
 		}
 		div.details
@@ -53,6 +53,7 @@
 		
 	</div>
 	<div class="image">
+		<img class="img-responsive" src="{imageurl}" alt="{imageurl}">
 	</div>
 	<br />
 	<hr>
