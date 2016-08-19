@@ -27,6 +27,7 @@
 			float:left;
 			width:50%;
 			/*max-height:120px;*/
+			min-height: 100px;
 			margin-top: 20px;
     		margin-bottom: 20px;
     		margin-right: 40px;
@@ -41,6 +42,7 @@
 		}
 		div.button
 		{
+
 			float:right;
 			display:inline;
 			vertical-align: middle;
