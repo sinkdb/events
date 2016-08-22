@@ -8,7 +8,7 @@
 		    border-color:black;
 		    border-width:1px;*/
 		    margin:20px;
-		    width:750px;
+		    width:800px;
 		    /*height:165px;*/
 			
 		} 
@@ -19,6 +19,7 @@
 			width:50%;
 			/*background-color:black;*/
 			height:260px;
+			/*margin-left: 5px;*/
 		}
 		div.details
 		{
@@ -47,6 +48,7 @@
 		<br />
 		<span class="glyphicon glyphicon-time"></span>
 		Doors: {opentime}
+		<br />
 		Show: {starttime}
 		<br />
 		<i class="fa fa-ticket"></i> {ticketprices}
