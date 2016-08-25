@@ -12,49 +12,42 @@
 		    width:800px;
 			min-height:165px;
 			display: flex;
-			/*clear:both;*/
-			/*height: auto;*/
-			/*height: 1%;*/
-			
-			/*display: table;*/
 		} 
-		div.events:after
-		{
-			/*display: table;
-			clear : both;*/
-		}
 		div.image
 		{
-			/*background-color:black;*/
 			float:left;
 			width:40%;
-			/*max-height:120px;*/
-			/*min-height: 100px;*/
 			height:100%;
 			margin-top: 20px;
     		margin-bottom: 20px;
     		margin-right: 40px;
     		margin-left: 20px;
     		overflow: hidden;
+    		position:relative;
+		}
+		div.event-date
+		{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			color:white;
+			width:100%;
+			font-size: 200%;
+			background-image: linear-gradient(to bottom,rgba(22,24,23,0),#161817);
 		}
 		div.info
 		{
 			float:left;
 			width:40%;
-			/*height:auto;*/
 			height:100%;
 			margin-bottom:10px;
-			/*height:120px;*/
 		}
 		div.button
 		{
 			width:20%;
 			float:left;
 			height:100%;
-			/*display:inline;*/
-			/*vertical-align: middle;*/
 			margin:10px;
-			/*padding: 10px 24px*/
 		}
 		form
 		{
@@ -71,7 +64,10 @@
 <!-- BEGIN EVENTS -->
 		<div class="events" style="height: auto;">
 			<div class="image">
-				<img class="img-responsive" src="{imageurl}" height="100" width="250" alt="{imageurl}">
+				<img class="img-responsive" src="{imageurl}" alt="{imageurl}">
+				<div class="event-date">
+					{eventdate} at {eventlocation}
+				</div>
 			</div>
 			<div class="info">
 				<h3>{eventname}</h3>
