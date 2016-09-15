@@ -28,7 +28,7 @@
 <h2>Add Event</h2>
 <hr>
 <div class="left">
-	<form method="post" action="./events/?action=AddEvent" enctype = "multipart/form-data" >
+	<form method="post" action="./events/?action=AddEvent" enctype="multipart/form-data">
 	<label for="event_name">Event Name:</label>
 	<input name="event_name" type="text" class="form-control" id="event_name">
 

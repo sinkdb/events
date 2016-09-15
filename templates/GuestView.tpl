@@ -23,12 +23,7 @@
     		margin-right: 40px;
     		margin-left: 20px;
     		overflow: hidden;
-    		position: relative;
-    		/*background-color: rgba(55, 155, 55, 0.5);*/
-    		/*background: linear-gradient(white, black);*/
-    		/*color: linear-gradient(white, black);*/
-    		/*background: -webkit-linear-gradient(#eee, #333);*/
-    		
+    		position: relative;   		
 		}
 		div.event-date
 		{
@@ -79,8 +74,6 @@
 					<li>{ticketprices} </li>
 				</ul>
 				{eventrestrictions}
-				
-				
 			</div>
 			<div class="button">
 				<form method="post" action="./events/?action=ShowEventDetails">

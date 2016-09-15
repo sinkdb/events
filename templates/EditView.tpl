@@ -67,7 +67,10 @@
 	<button name="edit" type="submit" class="btn btn-primary" value="{id}">Submit</button>
 	</form>
 	<form method="" action="./events/?action=ShowAdminHome">
-	<button name="cancel" type="submit" class="btn btn-danger" value="">Cancel</button>
+	<button name="cancel" type="submit" class="btn btn-warning" value="">Cancel</button>
+	</form>
+	<form method="" action="./events/?action=DeleteEvent">
+	<button name="delete" type="submit" class="btn btn-danger" value="">Delete Event</button>
 	</form>
 </div>
 <!-- END DETAILS -->

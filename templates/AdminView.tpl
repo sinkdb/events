@@ -23,7 +23,7 @@
     		margin-right: 40px;
     		margin-left: 20px;
     		overflow: hidden;
-    		position:relative;
+    		position: relative;
 		}
 		div.event-date
 		{
@@ -76,9 +76,7 @@
 						Doors Open: {opentime}
 					<li>{ticketprices} </li>
 				</ul>
-				{eventrestrictions}
-				
-				
+				{eventrestrictions}				
 			</div>
 			<div class="button">
 				<form method="post" action="./events/?action=ShowEventDetails">

@@ -9,11 +9,8 @@ class UserStatus
 
 	public static function isAdmin()
 	{
-		/*return Current_User::isLogged() &&
-		Current_User::IsUnrestricted('events');*/
-
-		return true;
-		//return false;
+		return Current_User::isLogged() &&
+		Current_User::IsUnrestricted('events');
 	}
 
 	public static function isGuest()
