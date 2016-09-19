@@ -31,6 +31,10 @@ class EditView extends \events\EventsView {
 			$formatted_date = $formatted_date->format('Y-m-d');
 			$tpl['DETAILS'][$i]['eventdate'] = $formatted_date;
 		}	
+		//$form = new \PHPWS_Form('edit-event');
+		//$form->addHidden('module', 'blog');
+		//$form->addTextArea('summary', 'event');
+		//$tpl->useEditor('event_details');
 
 		$this->showEvents(\PHPWS_Template::process($tpl, 'events', 'EditView.tpl'));
 	}
