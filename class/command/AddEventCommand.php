@@ -9,6 +9,11 @@ class AddEventCommand extends \events\Command {
 
 	function execute(CommandContext $context)
 	{
+		if(!\UserStatus::isAdmin())
+		{
+        	header('Location: ./?action=ShowGuestHome');
+        }
+
 		$image_url = "https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150";
 		if($_FILES['event_image']['size'] > 0 and $_FILES['event_image']['size'] < 2097152)
 		{

@@ -67,10 +67,25 @@
 	<button name="edit" type="submit" class="btn btn-primary" value="{id}">Submit</button>
 	</form>
 	<form method="" action="./events/?action=ShowAdminHome">
-	<button name="cancel" type="submit" class="btn btn-warning" value="">Cancel</button>
+		<button name="cancel" type="submit" class="btn btn-warning" value="">Cancel</button>
 	</form>
 	<form method="post" action="./events/?action=DeleteEvent">
-	<button name="delete" type="submit" class="btn btn-danger" value="{id}">Delete Event</button>
+		<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+  			Delete
+		</button>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		        Are you sure?
+		      </div>
+		      <div class="modal-footer">
+		      	<button name="delete" type="submit" class="btn btn-danger" value="{id}">Delete Event</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 	</form>
 </div>
 <!-- END DETAILS -->
