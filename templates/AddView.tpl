@@ -1,4 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- include libraries(jQuery, bootstrap) -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+
+<!-- include summernote css/js-->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+
 <head>
 	<style>
 		div.left
@@ -28,6 +39,7 @@
 <h2>Add Event</h2>
 <hr>
 <div class="left">
+
 	<form method="post" action="./events/?action=AddEvent" enctype="multipart/form-data">
 	<label for="event_name">Event Name:</label>
 	<input name="event_name" type="text" class="form-control" id="event_name">
@@ -54,6 +66,9 @@
 </div>
 
 <div class="right">
+
+	<input type="hidden" name="total" id="total">
+
 	<label for="event_image">Event/Artist Image:</label>
 	<input name="event_image" id="event_image" type="file" class="form-control">
 
@@ -61,7 +76,24 @@
 	<input name="event_date" type="date" class="form-control" id="event_date">
 
 	<label for="event_details">Event/Artist Details:</label>
-	<textarea name="event_details" class="form-control" rows="6" id="event_details"></textarea>
+	<!--<textarea name="event_details" class="form-control" rows="6" id="event_details"></textarea>-->
+	<div id="summernote">test</div>
+	<script>
+    $(document).ready(function() {
+        $('#summernote').summernote({
+        	height: 200
+        });
+    });
+
+    //function setValue(){
+    	var markupStr = $('#summernote').summernote('code');
+    	var element = document.getElementById("total");
+		element.value = markupStr;
+    //}
+    
+	/*element.form.submit();*/
+
+  	</script>
 	<hr>
 	
 	<button name="add" type="submit" class="btn btn-primary" value="">Submit</button>

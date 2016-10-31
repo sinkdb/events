@@ -73,7 +73,7 @@
 				<h3>{eventname}</h3>
 				<ul>
 					<li>Show Start: {starttime} </li>
-						Doors Open: {opentime}
+						Doors Open: {opentime} <!-- this is the part I have to make conditional somehow -->
 					<li>{ticketprices} </li>
 				</ul>
 				{eventrestrictions}				
