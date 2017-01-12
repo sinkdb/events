@@ -28,13 +28,8 @@
 			display:inline;
 		}
 	</style>
-<!-- 1 -->
-<link href="css/dropzone.css" type="text/css" rel="stylesheet" />
- 
-<!-- 2 -->
-<script src="dropzone.min.js"></script>
-
 </head>
+
 <body>
 <h2>Add Event</h2>
 <hr>
@@ -67,7 +62,7 @@
 
 <div class="right">
 
-	<input type="hidden" name="total" id="total">
+	<!--<input type="hidden" name="total" id="total">-->
 
 	<label for="event_image">Event/Artist Image:</label>
 	<input name="event_image" id="event_image" type="file" class="form-control">
@@ -76,24 +71,19 @@
 	<input name="event_date" type="date" class="form-control" id="event_date">
 
 	<label for="event_details">Event/Artist Details:</label>
-	<!--<textarea name="event_details" class="form-control" rows="6" id="event_details"></textarea>-->
-	<div id="summernote">test</div>
+	<textarea name="event_details" class="form-control" rows="6" id="summernote"></textarea>
+	<!--<div id="summernote"></div>-->
 	<script>
-    $(document).ready(function() {
-        $('#summernote').summernote({
-        	height: 200
-        });
-    });
-
-    //function setValue(){
-    	var markupStr = $('#summernote').summernote('code');
-    	var element = document.getElementById("total");
-		element.value = markupStr;
-    //}
-    
-	/*element.form.submit();*/
-
+    	$(document).ready(function() {
+        	$('#summernote').summernote({
+        		height: 200
+        	});
+    	});
+    	//var markupStr = $('#summernote').summernote('code');
+    	//var element = document.getElementById("total");
+		//element.value = markupStr;
   	</script>
+  	
 	<hr>
 	
 	<button name="add" type="submit" class="btn btn-primary" value="">Submit</button>

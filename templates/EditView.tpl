@@ -1,4 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- include libraries(jQuery, bootstrap) -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+
+<!-- include summernote css/js-->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+
 <head>
 	<style>
 		div.left
@@ -18,6 +29,7 @@
 		}
 	</style>
 </head>
+
 <body>
 <h2>Edit Event</h2>
 <hr>
@@ -59,9 +71,22 @@
 
 	<label for="event_date">Event Date:</label>
 	<input name="event_date" type="date" class="form-control" id="event_date" value="{eventdate}">
-	
+	<!--
 	<label for="event_details">Event/Artist Details:</label>
 	<textarea name="event_details" class="form-control" rows="6" id="event_details">{artistdetails}</textarea>
+	-->
+
+	
+	<label for="event_details">Event/Artist Details:</label>
+	<textarea name="event_details" class="form-control" rows="6" id="summernote">{artistdetails}</textarea>
+	<script>
+    	$(document).ready(function() {
+        	$('#summernote').summernote({
+        		height: 200
+        	});
+    	});
+  	</script>
+
 	<hr>
 	
 	<button name="edit" type="submit" class="btn btn-primary" value="{id}">Submit</button>

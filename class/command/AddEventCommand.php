@@ -24,10 +24,6 @@ class AddEventCommand extends \events\Command {
 			move_uploaded_file($tempFile,$targetFile);
 		}
 
-		var_dump($_POST);	
-		var_dump($context);
-		exit;
-
 		$event_name = $context->get('event_name');
 		$event_location = $context->get('event_location');
 		$event_date = (strtotime($context->get('event_date')) + 86399);
