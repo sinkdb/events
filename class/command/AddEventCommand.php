@@ -26,7 +26,7 @@ class AddEventCommand extends \events\Command {
 
 		$event_name = $context->get('event_name');
 		$event_location = $context->get('event_location');
-		$event_date = (strtotime($context->get('event_date')) + 86399);
+		$event_date = (strtotime($context->get('event_date')) + 68399);
 		$ticket_prices = $context->get('ticket_prices');
 		$ticket_location = $context->get('ticket_location');
 		$open_time = $context->get('open_time');

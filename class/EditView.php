@@ -5,6 +5,8 @@ class EditView extends \events\EventsView {
 
 	public $eventID;
 
+	
+
 	public function setEventID($id)
 	{
 		$this->eventID = $id;
@@ -12,6 +14,11 @@ class EditView extends \events\EventsView {
 	
 	public function show()
 	{
+
+		if (!\UserStatus::isAdmin()){
+			header('Location: ./?action=ShowGuestHome');
+		}
+		
 		$tpl = array();
 
 		\Layout::addPageTitle("Edit Event");

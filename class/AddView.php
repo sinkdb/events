@@ -5,6 +5,10 @@ class AddView extends \events\EventsView {
 	
 	public function show()
 	{
+		if (!\UserStatus::isAdmin()){
+			header('Location: ./?action=ShowGuestHome');
+		}
+		
 		$tpl = array();
 
 		\Layout::addPageTitle("Add New Event");
