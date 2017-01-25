@@ -5,7 +5,6 @@
 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
 
-
 <!-- include summernote css/js-->
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
@@ -41,13 +40,43 @@
 
 	<label for="event_location">Event Location:</label>
 	<input name="event_location" type="text" class="form-control" id="event_location" value="{eventlocation}" required>
+	<br />
 
 	<label>Tickets</label>
 	<br />
 	<label for="ticket_price">Prices:</label>
 	<textarea name="ticket_prices" class="form-control" rows="3" id="ticket_prices" required>{ticketprices}</textarea>
+	<script>
+    	$(document).ready(function() {
+        	$('#ticket_prices').summernote({
+        		toolbar: [
+        		['style', ['bold', 'italic', 'underline', 'clear']],
+        		['fontsize', ['fontsize']],
+        		['fontname', ['fontname']],
+        		['para', ['ul', 'ol']],
+        		['insert', ['link']]
+        		],
+        		height: 50
+        	});
+    	});
+  	</script>
+
 	<label for="ticket_location">Where to Buy:</label>
 	<textarea name="ticket_location" class="form-control" rows="4" id="ticket_location" required>{ticketlocation}</textarea>
+	<script>
+    	$(document).ready(function() {
+        	$('#ticket_location').summernote({
+        		toolbar: [
+        		['style', ['bold', 'italic', 'underline', 'clear']],
+        		['fontsize', ['fontsize']],
+        		['fontname', ['fontname']],
+        		['para', ['ul', 'ol']],
+        		['insert', ['link']]
+        		],
+        		height: 50
+        	});
+    	});
+  	</script>
 
 	<label>Times</label>
 	<br />
@@ -58,11 +87,13 @@
 
 	<label for="event_restrictions">Restrictions:</label>
 	<input name="event_restrictions" type="text" class="form-control" id="event_restrictions" value="{eventrestrictions}">
+	<br />
 </div>
+
 
 <div class="right">
 	<label for="event_image">Event/Artist Image:</label>
-	<input name="event_image" id="event_image" type="file" class="file" value="{imageurl}">
+	<input name="event_image" id="event_image" type="file" class="form-control">
 
 	<input hidden name="test_name" id="test_name" value="{imageurl}">
 
@@ -71,17 +102,19 @@
 
 	<label for="event_date">Event Date:</label>
 	<input name="event_date" type="date" class="form-control" id="event_date" value="{eventdate}">
-	<!--
-	<label for="event_details">Event/Artist Details:</label>
-	<textarea name="event_details" class="form-control" rows="6" id="event_details">{artistdetails}</textarea>
-	-->
-
 	
 	<label for="event_details">Event/Artist Details:</label>
 	<textarea name="event_details" class="form-control" rows="6" id="summernote">{artistdetails}</textarea>
 	<script>
     	$(document).ready(function() {
         	$('#summernote').summernote({
+        		toolbar: [
+        		['style', ['bold', 'italic', 'underline', 'clear']],
+        		['fontsize', ['fontsize']],
+        		['fontname', ['fontname']],
+        		['para', ['ul', 'ol']],
+        		['insert', ['link']]
+        		],
         		height: 200
         	});
     	});

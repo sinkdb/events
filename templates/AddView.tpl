@@ -34,20 +34,50 @@
 <h2>Add Event</h2>
 <hr>
 <div class="left">
-
 	<form method="post" action="./events/?action=AddEvent" enctype="multipart/form-data">
+		
 	<label for="event_name">Event Name:</label>
 	<input name="event_name" type="text" class="form-control" id="event_name">
 
 	<label for="event_location">Event Location:</label>
 	<input name="event_location" type="text" class="form-control" id="event_location" required>
+	<br />
 
 	<label>Tickets</label>
 	<br />
 	<label for="ticket_price">Prices:</label>
 	<textarea name="ticket_prices" class="form-control" rows="3" id="ticket_prices" required></textarea>
+	<script>
+    	$(document).ready(function() {
+        	$('#ticket_prices').summernote({
+        		toolbar: [
+        		['style', ['bold', 'italic', 'underline', 'clear']],
+        		['fontsize', ['fontsize']],
+        		['fontname', ['fontname']],
+        		['para', ['ul', 'ol']],
+        		['insert', ['link']]
+        		],
+        		height: 50
+        	});
+    	});
+  	</script>
+
 	<label for="ticket_location">Where to Buy:</label>
 	<textarea name="ticket_location" class="form-control" rows="4" id="ticket_location" required></textarea>
+	<script>
+    	$(document).ready(function() {
+        	$('#ticket_location').summernote({
+        		toolbar: [
+        		['style', ['bold', 'italic', 'underline', 'clear']],
+        		['fontsize', ['fontsize']],
+        		['fontname', ['fontname']],
+        		['para', ['ul', 'ol']],
+        		['insert', ['link']]
+        		],
+        		height: 50
+        	});
+    	});
+  	</script>
 
 	<label>Times</label>
 	<br />
@@ -58,12 +88,10 @@
 
 	<label for="event_restrictions">Restrictions:</label>
 	<input name="event_restrictions" type="text" class="form-control" id="event_restrictions">
+	<br />
 </div>
 
 <div class="right">
-
-	<!--<input type="hidden" name="total" id="total">-->
-
 	<label for="event_image">Event/Artist Image:</label>
 	<input name="event_image" id="event_image" type="file" class="form-control">
 
@@ -72,16 +100,19 @@
 
 	<label for="event_details">Event/Artist Details:</label>
 	<textarea name="event_details" class="form-control" rows="6" id="summernote"></textarea>
-	<!--<div id="summernote"></div>-->
 	<script>
     	$(document).ready(function() {
         	$('#summernote').summernote({
+        		toolbar: [
+        		['style', ['bold', 'italic', 'underline', 'clear']],
+        		['fontsize', ['fontsize']],
+        		['fontname', ['fontname']],
+        		['para', ['ul', 'ol']],
+        		['insert', ['link']]
+        		],
         		height: 200
         	});
     	});
-    	//var markupStr = $('#summernote').summernote('code');
-    	//var element = document.getElementById("total");
-		//element.value = markupStr;
   	</script>
   	
 	<hr>
