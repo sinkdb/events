@@ -38,11 +38,11 @@
 
 <!-- BEGIN DETAILS -->
 
-<div class="event">
+<div class="event" >
 	<div class="details">
 		<h2>{eventname}</h2>
 		<hr>
-		{eventdate}
+		Date: {eventdate}
 		<br />
 		<span class="glyphicon glyphicon-map-marker"></span> {eventlocation}
 		<br />
@@ -51,7 +51,7 @@
 		<br />
 		Show: {starttime}
 		<br />
-		<i class="fa fa-ticket"></i> {ticketprices}
+		<!--<i class="fa fa-ticket"></i>-->Tickets: {ticketprices}
 		
 	</div>
 	<div class="image">

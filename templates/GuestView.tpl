@@ -34,6 +34,7 @@
 			width:100%;
 			font-size: 200%;
 			background-image: linear-gradient(to bottom,rgba(22,24,23,0),#161817);
+			text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 		}
 		div.info
 		{
@@ -59,19 +60,20 @@
 <body>
 <h2>Upcoming Events</h2>
 <!-- BEGIN EVENTS -->
-		<div class="events" style="height: auto;">
+		<div class="events" style="height: auto; width: auto;">
 			<div class="image">
 				<img class="img-responsive" src="{imageurl}" alt="{imageurl}">
 				<div class="event-date">
-					{eventdate} at {eventlocation}
+					{eventdate}
 				</div>
 			</div>
 			<div class="info">
 				<h3>{eventname}</h3>
 				<ul>
-					<li>Show Start: {starttime} </li>
-						Doors Open: {opentime}
-					<li>{ticketprices} </li>
+					<li>Doors Open: {opentime}</li>
+						Show Start: {starttime}
+
+					<li>{ticketinformation} </li>
 				</ul>
 				{eventrestrictions}
 			</div>

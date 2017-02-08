@@ -15,7 +15,6 @@
 		{
 			float:left;
 			width:45%;
-
 		}
 		div.right
 		{
@@ -37,49 +36,23 @@
 	<form method="post" action="./events/?action=EditEventDetails"  enctype = "multipart/form-data">
 	<label for="event_name">Event Name:</label>
 	<input name="event_name" type="text" class="form-control" id="event_name" value="{eventname}"required>
-
-	<label for="event_location">Event Location:</label>
-	<input name="event_location" type="text" class="form-control" id="event_location" value="{eventlocation}" required>
 	<br />
 
-	<label>Tickets</label>
-	<br />
-	<label for="ticket_price">Prices:</label>
-	<textarea name="ticket_prices" class="form-control" rows="3" id="ticket_prices" required>{ticketprices}</textarea>
+	<label for="ticket_information">Ticket Information:</label>
+	<textarea name="ticket_information" class="form-control" rows="4" id="ticket_information" required>{ticketinformation}</textarea>
 	<script>
     	$(document).ready(function() {
-        	$('#ticket_prices').summernote({
+        	$('#ticket_information').summernote({
         		toolbar: [
-        		['style', ['bold', 'italic', 'underline', 'clear']],
-        		['fontsize', ['fontsize']],
-        		['fontname', ['fontname']],
-        		['para', ['ul', 'ol']],
-        		['insert', ['link']]
+        			['style', ['bold', 'italic', 'underline', 'clear']],
+        			['para', ['ul', 'ol']],
+        			['insert', ['link']]
         		],
-        		height: 50
+        		height: 100
         	});
     	});
   	</script>
 
-	<label for="ticket_location">Where to Buy:</label>
-	<textarea name="ticket_location" class="form-control" rows="4" id="ticket_location" required>{ticketlocation}</textarea>
-	<script>
-    	$(document).ready(function() {
-        	$('#ticket_location').summernote({
-        		toolbar: [
-        		['style', ['bold', 'italic', 'underline', 'clear']],
-        		['fontsize', ['fontsize']],
-        		['fontname', ['fontname']],
-        		['para', ['ul', 'ol']],
-        		['insert', ['link']]
-        		],
-        		height: 50
-        	});
-    	});
-  	</script>
-
-	<label>Times</label>
-	<br />
 	<label for="open_time">Doors Open:</label>
 	<input name="open_time" type="text" class="form-control" id="open_time" value="{opentime}">
 	<label for="start_time">Show Start:</label>
@@ -89,7 +62,6 @@
 	<input name="event_restrictions" type="text" class="form-control" id="event_restrictions" value="{eventrestrictions}">
 	<br />
 </div>
-
 
 <div class="right">
 	<label for="event_image">Event/Artist Image:</label>
@@ -111,7 +83,6 @@
         		toolbar: [
         		['style', ['bold', 'italic', 'underline', 'clear']],
         		['fontsize', ['fontsize']],
-        		['fontname', ['fontname']],
         		['para', ['ul', 'ol']],
         		['insert', ['link']]
         		],

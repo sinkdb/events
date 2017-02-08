@@ -4,7 +4,6 @@
 <!-- include libraries(jQuery, bootstrap) -->
 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
 
 <!-- include summernote css/js-->
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
@@ -38,49 +37,23 @@
 		
 	<label for="event_name">Event Name:</label>
 	<input name="event_name" type="text" class="form-control" id="event_name">
-
-	<label for="event_location">Event Location:</label>
-	<input name="event_location" type="text" class="form-control" id="event_location" required>
 	<br />
 
-	<label>Tickets</label>
-	<br />
-	<label for="ticket_price">Prices:</label>
-	<textarea name="ticket_prices" class="form-control" rows="3" id="ticket_prices" required></textarea>
+	<label for="ticket_information">Ticket Information:</label>
+	<textarea name="ticket_information" class="form-control" rows="4" id="ticket_information" required></textarea>
 	<script>
     	$(document).ready(function() {
-        	$('#ticket_prices').summernote({
+        	$('#ticket_information').summernote({
         		toolbar: [
-        		['style', ['bold', 'italic', 'underline', 'clear']],
-        		['fontsize', ['fontsize']],
-        		['fontname', ['fontname']],
-        		['para', ['ul', 'ol']],
-        		['insert', ['link']]
+        			['style', ['bold', 'italic', 'underline', 'clear']],
+        			['para', ['ul', 'ol']],
+        			['insert', ['link']]
         		],
-        		height: 50
+        		height: 100
         	});
     	});
   	</script>
 
-	<label for="ticket_location">Where to Buy:</label>
-	<textarea name="ticket_location" class="form-control" rows="4" id="ticket_location" required></textarea>
-	<script>
-    	$(document).ready(function() {
-        	$('#ticket_location').summernote({
-        		toolbar: [
-        		['style', ['bold', 'italic', 'underline', 'clear']],
-        		['fontsize', ['fontsize']],
-        		['fontname', ['fontname']],
-        		['para', ['ul', 'ol']],
-        		['insert', ['link']]
-        		],
-        		height: 50
-        	});
-    	});
-  	</script>
-
-	<label>Times</label>
-	<br />
 	<label for="open_time">Doors Open:</label>
 	<input name="open_time" type="text" class="form-control" id="open_time">
 	<label for="start_time">Show Start:</label>
@@ -104,11 +77,9 @@
     	$(document).ready(function() {
         	$('#summernote').summernote({
         		toolbar: [
-        		['style', ['bold', 'italic', 'underline', 'clear']],
-        		['fontsize', ['fontsize']],
-        		['fontname', ['fontname']],
-        		['para', ['ul', 'ol']],
-        		['insert', ['link']]
+        			['style', ['bold', 'italic', 'underline', 'clear']],
+        			['para', ['ul', 'ol']],
+        			['insert', ['link']]
         		],
         		height: 200
         	});
