@@ -91,6 +91,8 @@
     	});
   	</script>
 
+  	<label for="hidden">Hidden: </label> <input type="checkbox" name="hidden" value="1" {hidden} >
+
 	<hr>
 	
 	<button name="edit" type="submit" class="btn btn-primary" value="{id}">Submit</button>

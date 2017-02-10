@@ -18,6 +18,8 @@ class EditEventDetailsCommand extends \events\Command {
 		$start_time = $context->get('start_time');
 		$event_restrictions = $context->get('event_restrictions');
 		$artist_details = $context->get('event_details');
+		$hidden = $context->get('hidden');
+		$hidden = isset($hidden) ? "checked" : NULL;
 
 		if($_FILES['event_image']['size'] > 0 and $_FILES['event_image']['size'] < 2097152)
 		{
@@ -34,14 +36,14 @@ class EditEventDetailsCommand extends \events\Command {
 		$query = "UPDATE events_events set eventname = :event_name, eventdate = :event_date, 
 					ticketinformation = :ticket_information, opentime = :open_time, 
 					starttime = :start_time, eventrestrictions = :event_restrictions, 
-					artistdetails = :artist_details, imageurl = :image_url where id = :id";
+					artistdetails = :artist_details, imageurl = :image_url, hidden = :hidden where id = :id";
 
 		$sth = $pdo->prepare($query);
 
 		$sth->execute(array('event_name'=>$event_name,'event_date'=>$event_date, 
 							'ticket_information'=>$ticket_information, 'open_time'=>$open_time, 
 							'start_time'=>$start_time, 'event_restrictions'=>$event_restrictions, 
-							'artist_details'=>$artist_details, 'id'=>$id, 'image_url'=>$image_url));
+							'artist_details'=>$artist_details, 'id'=>$id, 'image_url'=>$image_url, 'hidden'=>$hidden));
 
 		header('Location: ./?action=ShowAdminHome');
 	}

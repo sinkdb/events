@@ -2,7 +2,6 @@
 namespace events;
 abstract class EventsView extends View {
 	private $main;
-	//sidebar stuff?
 	public $sidebar = array();
 
 	protected $notifications;

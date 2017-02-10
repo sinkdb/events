@@ -51,7 +51,7 @@
 		<br />
 		Show: {starttime}
 		<br />
-		<!--<i class="fa fa-ticket"></i>-->Tickets: {ticketprices}
+		<!--<i class="fa fa-ticket"></i>-->Tickets: {ticketinformation}
 		
 	</div>
 	<div class="image">

@@ -31,21 +31,23 @@ class AddEventCommand extends \events\Command {
 		$start_time = $context->get('start_time');
 		$event_restrictions = $context->get('event_restrictions');
 		$artist_details = $context->get('event_details');
-		
+		$hidden = $context->get('hidden');
+		$hidden = isset($hidden) ? "checked" : NULL;
+
 		$db = \Database::getDB();
 		$pdo = $db->getPDO();
 			
 		$query = "INSERT INTO events_events (id, eventname, eventdate, ticketinformation, 
-					opentime, starttime, eventrestrictions, artistdetails, imageurl)
+					opentime, starttime, eventrestrictions, artistdetails, imageurl, hidden)
 				VALUES (nextval('events_seq'), :event_name, :event_date, :ticket_information,
-					:open_time, :start_time, :event_restrictions, :artist_details, :image_url)";
+					:open_time, :start_time, :event_restrictions, :artist_details, :image_url, :hidden)";
 
 		$sth = $pdo->prepare($query);
 
 		$sth->execute(array('event_name'=>$event_name, 'event_date'=>$event_date, 
 							'ticket_information'=>$ticket_information, 'open_time'=>$open_time, 
 							'start_time'=>$start_time, 'event_restrictions'=>$event_restrictions, 
-							'artist_details'=>$artist_details, 'image_url'=>$image_url));
+							'artist_details'=>$artist_details, 'image_url'=>$image_url, 'hidden'=>$hidden));
 
 		header('Location: ./?action=ShowAdminHome');
 	}

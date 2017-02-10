@@ -28,11 +28,6 @@ abstract class Events {
 		$cmd->execute($this->context);
 	}
 
-	//Do I need these? They're in HMS.php
-	//protected function formatException
-	//protected function emailError
-	//protected function saveState
-
 	public function getView()
 	{
 		$this->view->render();
@@ -40,7 +35,6 @@ abstract class Events {
 
 	public static function quit()
 	{
-		//NQ::close();
 		exit();
 	}
 }

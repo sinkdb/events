@@ -11,7 +11,7 @@ class GuestView extends \events\EventsView {
 
 		$current_time = time();
 		$db = \Database::getDB();
-		$query = "select * from events_events where eventdate > '$current_time' order by eventdate";
+		$query = "select * from events_events where eventdate > '$current_time' and hidden is null order by eventdate";
 		$pdo = $db->query($query);
 		$result = $pdo->fetchAll();
 		foreach($result as $key=>$value)

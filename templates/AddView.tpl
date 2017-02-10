@@ -85,6 +85,8 @@
         	});
     	});
   	</script>
+
+  	<label for="hidden">Hidden: </label> <input type="checkbox" name="hidden" value="1">
   	
 	<hr>
 	
