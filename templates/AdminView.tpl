@@ -73,7 +73,7 @@
 			<div class="info">
 				<h3>{eventname}</h3>
 				<ul>
-					<li>Doors Open: {opentime} <!-- this is the part I have to make conditional somehow --> </li>
+					<li>Doors Open: {opentime}</li>
 						Show Start: {starttime}
 					<li>{ticketinformation} </li>
 				</ul>
