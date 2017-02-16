@@ -60,8 +60,11 @@
 <body>
 <h2>Upcoming Events</h2>
 <form method="post" action="./events/?action=ShowAddEvent">
-<button name="test" type="submit" class="btn btn-primary" value="{id}">Add Event</button>
+<button name="test" type="submit" class="btn btn-primary pull-right" value="{id}">Add Event</button>
 </form>
+<!-- BEGIN EMPTY -->
+<h3>{noevent}</h3>
+<!-- END EMPTY -->
 <!-- BEGIN EVENTS -->
 		<div class="events" style="height: auto; width: auto;">
 			<div class="image">

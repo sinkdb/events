@@ -1,4 +1,4 @@
 begin;
-drop table events_events;
-drop table events_log;
+drop table if exists events_events;
+drop sequence if exists events_seq;
 commit;

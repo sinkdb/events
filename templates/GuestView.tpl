@@ -59,6 +59,9 @@
 </head>
 <body>
 <h2>Upcoming Events</h2>
+<!-- BEGIN EMPTY -->
+<h3>{noevent}</h3>
+<!-- END EMPTY -->
 <!-- BEGIN EVENTS -->
 		<div class="events" style="height: auto; width: auto;">
 			<div class="image">
@@ -84,5 +87,6 @@
 			</div>
 		</div>
 <!-- END EVENTS -->
+
 </body>
 </html>
